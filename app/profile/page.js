@@ -55,18 +55,18 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
-const ProfilePage =  async() => {
+const ProfilePage =  () => {
  
-    // Retrieve user session details
-    const { getUser } = getKindeServerSession();
-    const user = await getUser();
+    // // Retrieve user session details
+    // const { getUser } = getKindeServerSession();
+    // const user = await getUser();
     
 
 
-    if (!user) {
-      // Redirect to login if no user is found
-      redirect('/api/auth/login'); // Server-side redirection
-    }
+    // if (!user) {
+    //   // Redirect to login if no user is found
+    //   redirect('/api/auth/login'); // Server-side redirection
+    // }
 
     return (
         <div>
