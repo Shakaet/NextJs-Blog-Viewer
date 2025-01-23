@@ -55,6 +55,9 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
+// Ensure SSR for Vercel
+export const dynamic = 'force-dynamic';
+
 const ProfilePage =  async() => {
  
     // Retrieve user session details
@@ -63,10 +66,10 @@ const ProfilePage =  async() => {
     
 
 
-    // if (!user) {
-    //   // Redirect to login if no user is found
-    //   redirect('/api/auth/login'); // Server-side redirection
-    // }
+    if (!user) {
+      // Redirect to login if no user is found
+      redirect('/api/auth/login'); // Server-side redirection
+    }
 
     return (
         <div>

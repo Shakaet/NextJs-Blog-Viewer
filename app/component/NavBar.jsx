@@ -7,7 +7,10 @@ const NavBar = async() => {
 
   let {getUser}= getKindeServerSession()
 
+
+
   let user= await getUser()
+
     return (
 //         <div>
 //              <div className="navbar bg-base-100">
