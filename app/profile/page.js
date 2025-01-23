@@ -80,6 +80,13 @@ const ProfilePage =  async() => {
             </div>
           </div>
           }
+
+            <div className="p-8 bg-white shadow-lg rounded-lg text-center">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                Welcome to your profile!
+              </h2>
+             
+            </div>
         
         </div>
       
