@@ -55,7 +55,7 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
-const ProfilePage = async () => {
+const ProfilePage =  async() => {
  
     // Retrieve user session details
     const { getUser } = getKindeServerSession();
@@ -70,8 +70,7 @@ const ProfilePage = async () => {
 
     return (
         <div>
-          {
-          user && <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-100 to-pink-500">
+           <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-100 to-pink-500">
           <div className="p-8 bg-white shadow-lg rounded-lg text-center">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
               Welcome to your profile!
@@ -79,7 +78,7 @@ const ProfilePage = async () => {
            
           </div>
         </div>
-        }
+        
         </div>
       
     );
