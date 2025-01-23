@@ -63,10 +63,10 @@ const ProfilePage =  async() => {
     
 
 
-    // if (!user) {
-    //   // Redirect to login if no user is found
-    //   redirect('/api/auth/login'); // Server-side redirection
-    // }
+    if (!user) {
+      // Redirect to login if no user is found
+      redirect('/api/auth/login'); // Server-side redirection
+    }
 
     return (
         <div>
@@ -81,12 +81,12 @@ const ProfilePage =  async() => {
           </div>
           }
 
-            <div className="p-8 bg-white shadow-lg rounded-lg text-center">
+            {/* <div className="p-8 bg-white shadow-lg rounded-lg text-center mt-44">
               <h2 className="text-4xl font-bold text-gray-800 mb-4">
                 Welcome to your profile!
               </h2>
              
-            </div>
+            </div> */}
         
         </div>
       
