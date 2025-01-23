@@ -55,11 +55,11 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
-const ProfilePage =  () => {
+const ProfilePage =  async() => {
  
-    // // Retrieve user session details
-    // const { getUser } = getKindeServerSession();
-    // const user = await getUser();
+    // Retrieve user session details
+    const { getUser } = getKindeServerSession();
+    const user = await getUser();
     
 
 
@@ -70,14 +70,16 @@ const ProfilePage =  () => {
 
     return (
         <div>
-           <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-100 to-pink-500">
-          <div className="p-8 bg-white shadow-lg rounded-lg text-center">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Welcome to your profile!
-            </h2>
-           
+          {
+            user &&  <div className="flex items-center justify-center h-screen bg-gradient-to-br from-purple-100 to-pink-500">
+            <div className="p-8 bg-white shadow-lg rounded-lg text-center">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                Welcome to your profile!
+              </h2>
+             
+            </div>
           </div>
-        </div>
+          }
         
         </div>
       
